@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+  </head>
+  <body>
+   <% for(var i=0; i < issues.length; i++) {
+     var issue = issues[i];
+     console.log(issue)%>
+    <div style="border:2px solid #D3D3D3; border-radius: 3px;width:50%; text-align:center; margin: auto;cell-padding: 4px ">
+      <p style="font-size:30px;font-weight: bold ">
+        <%= issue.heading%>
+      </p><br />
+      <p>
+        <%= issue.content%>
+      </p>
+      <P>
+         <%= issue.date%>
+         <button id="upvote" onclick="upvote('<%=issues[i]._id%>')" type="submit">Upvote(<%= issues[i].upvote.length%>)</button>
+         <button id="downvote" onclick="downvote('<%=issues[i]._id%>')" type="submit">Downvote(<%=issues[i].downvote.length%>)</button>
+      </P>
+    </div><br />
+   <% } %>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script type="text/javascript">
+   function upvote(id){
+     console.log("Upvoting "+id)
+     $.ajax({
+       url : '/upvote/' + id,
+       method : 'GET',
+       success : function(response){
+         if(response > 0){
+
+           //upvote button disable
+           //Increase count
+           $("#upvote").attr('value',Upvote(response));
+         }
+       }
+     })
+   };
+
+   function downvote(id){
+     console.log("Downvoting "+id)
+     $.ajax({
+       url : '/downvote/' + id,
+       method : 'GET',
+       success : function(response){
+         if(response > 0){
+
+           //upvote button disable
+           //Increase count
+         }
+       }
+     })
+   }
+
+     $(document).ready(function(){
+
+     })
+
+   </script>
+  </body>
+</html>

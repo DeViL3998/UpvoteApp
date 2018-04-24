@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ISSUES</title>
+  </head>
+  <body>
+    <div class="createIssue">
+      <form method="post" action="/issue">
+        <input type="text" name="heading"  /><br />
+        <textarea name="detail" cols="40" rows="2" ></textarea><br />
+        <button type="submit" value="button" class="submit" >SUBMIT</button>
+      </form>
+    </div>
+    <% issues.forEach(function(issue) { %>
+      <div style="border:2px; background-color:skyblue; opacity:70%;  " >
+        <p style=" text-align:left; font-family:Lato; cell-padding: 2px">
+          <%= heading %>
+        </p>
+        <p>
+          <%=content %>
+        </p>
+        <p>
+          <%=date %>
+        </p>
+      </div>
+
+    <% }); %>
+    <div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+    </script>
+  </body>
+</html>

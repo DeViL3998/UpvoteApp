@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create Issue</title>
+    <style>
+      #intro{
+        text-emphasis-color: blue;
+        font-size: 14px;
+      },
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="createIssue">
+        <div id="intro">
+          <p>
+            Hello Mr. <%=firstname%>
+          </p>
+        </div>
+         Create your Issue here:
+         <div class="createIssue">
+           <form method="post" action="/create">
+             <input type="text" name="heading"  /><br />
+             <textarea name="detail" cols="40" rows="2" ></textarea><br />
+             <button type="submit" value="button" class="submit" >SUBMIT</button>
+           </form>
+         </div>
+      </div>
+    </div>
+  </body>
+</html>
