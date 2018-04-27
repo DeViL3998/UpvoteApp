@@ -1,0 +1,27 @@
+{
+  "name": "save",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeViL3998/UpvoteApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeViL3998/UpvoteApp/issues"
+  },
+  "homepage": "https://github.com/DeViL3998/UpvoteApp#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "ejs-template": "^0.1.0",
+    "express-ejs-layouts": "^2.4.0",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.5.0"
+  }
+}

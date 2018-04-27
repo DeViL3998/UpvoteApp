@@ -2,32 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/createpage.css">
     <title>Create Issue</title>
-    <style>
+  <!--   <style>
       #intro{
         text-emphasis-color: blue;
         font-size: 14px;
       },
 
-    </style>
+    </style> -->
   </head>
   <body>
-    <div>
-      <div class="createIssue">
-        <div id="intro">
+      <div id="intro">
           <p>
-            Hello Mr. <%=firstname%>
+            Hello <%=firstname%>
           </p>
         </div>
-         Create your Issue here:
+      <!-- <div class="createIssue"> -->
+        <center>
+         <h1>Create your Issue here:</h1>
          <div class="createIssue">
            <form method="post" action="/create">
-             <input type="text" name="heading"  /><br />
-             <textarea name="detail" cols="40" rows="2" ></textarea><br />
+             <input type="text" name="heading" placeholder="Heading"><br>
+             <textarea name="detail" cols="40" rows="15" placeholder="post in your content" ></textarea><br>
              <button type="submit" value="button" class="submit" >SUBMIT</button>
            </form>
+           </center>
          </div>
-      </div>
-    </div>
+      <!-- </div> -->
   </body>
 </html>

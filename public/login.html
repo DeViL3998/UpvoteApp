@@ -2,23 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/loginpage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <title>Login Page</title>
   </head>
   <body>
     <div class="logintext">
       <p>
-        Please Login Here
+        LOGIN
       </p>
     </div>
+    <center>
     <div class="submitarea">
       <form method="post" action="/login" >
-        <input type="text" class="username" name="username" placeholder="Username" /><br />
-        <input type="password" class="password" name="password" placeholder="Password" /><br />
+        <input type="text" class="username" name="username" placeholder="Username" />
+        <input type="password" class="password" name="password" placeholder="Password" />
         <button type="submit" class="submit" value="submit">LOGIN</button>
+        <br>
+        <p>if you don't have account please <a href="/signup">Signup</a></p>
       </form>
     </div>
-    <p>
+    </center>
+   <!--  <p>
       Thank You for using our services!
-    </p>
+    </p> -->
   </body>
 </html>
